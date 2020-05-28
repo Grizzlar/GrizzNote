@@ -1,0 +1,395 @@
+body{
+    margin: 0px;
+    background-color: #dedede;
+    font-family: "Open Sans";
+    color: #fff;
+}
+
+textarea{
+    font-family: "Open Sans";
+}
+
+.listHolder{
+    width: 20%;
+}
+.modalHolder{
+    width: 80%;
+}
+#modalParent{
+    height: 100vh;
+}
+.searchFill{
+    padding-top: 2%;
+}
+.searchMobile{
+    background-color: #1e1e1e;
+    display: none;
+}
+.cardList{
+    height: 100vh;
+    width: 100%;
+    background-color: #1e1e1e;
+}
+.cardModal{
+    border: 2px solid black;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    width: 50%;
+    padding: 0px;
+    margin-left: 25%;
+    padding-bottom: 1em;
+    margin-right: auto;
+}
+.popup{
+    border: 2px solid black;
+    background-color: #1e1e1e;
+    width: 100vw;
+    margin: 0;
+}
+@media only screen and (max-width: 1500px) {
+    .listHolder{
+        width: 300px;
+    }
+    .modalHolder{
+        width: auto;
+    }
+    .cardModal{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .cardModal{
+        width: 60%;
+        margin-left: 20%;
+    }
+    #mainModal{
+        width: 48vw;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    #spop{
+        display: none;
+    }
+    #mainModal{
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .listHolder{
+        display: none;
+    }
+    #mainModal{
+        width: 100vw;
+    }
+    .modalHolder{
+        width: 100%;
+    }
+    .cardModal{
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        width: 100%;
+        margin: 0px;
+    }
+    .searchFill{
+        display: none;
+    }
+    .searchMobile{
+        display: block;
+    }
+}
+
+.cardTitle{
+    padding-top: 1em;
+    padding-bottom: 0.7em;
+}
+
+.cardTitleText{
+    font-size: 1.5em;
+}
+
+.editPencil{
+    color: #626569;
+}
+
+.editPencil:hover, .editPencil:active, .editPencil:focus{
+    color: #2755a1;
+    cursor: pointer;
+}
+
+.addTag{
+    color: #626569;
+}
+
+.addTag:hover, .addTag:active, .addTag:focus{
+    color: orangered;
+    cursor: pointer;
+}
+
+.addContent{
+    color: #fff;
+    font-size: 1.25em;
+}
+
+.addContent:hover, .addContent:active, .addContent:focus{
+    color: orangered;
+    cursor: pointer;
+}
+
+.tagPart{
+    display: inline;
+}
+
+.titleInput{
+    font-size: 1em;
+    border-radius: 20px;
+    width: 80%;
+    border: 1px solid black;
+    padding: 0.2em 0.5em;
+}
+
+.searchInput{
+    font-size: 1em;
+    border-radius: 20px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border: none;
+    padding: 0.2em 0.5em;
+}
+
+.tagInput{
+    font-size: 1em;
+    border-radius: 20px;
+    width: 40%;
+    border: 1px solid black;
+    padding: 0.2em 0.5em;
+}
+
+.contTitleInput{
+    font-size: 1em;
+    border-radius: 20px;
+    width: 40%;
+    border: 1px solid black;
+    padding: 0.2em 0.5em;
+}
+
+.tagContainer{
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.5em;
+}
+
+.cardTag{
+    display: inline-block;
+    margin-left: 0.1em;
+    margin-top: 0.7em;
+    padding: 0.2em 0.5em;
+    border-radius: 20px;
+    border: none;
+}
+
+.cardTag:hover, .selectedTag{
+    background-color: #2755a1 !important;
+}
+
+.cardTag:hover{
+    cursor: pointer;
+}
+
+.conTag:hover {
+    background-color: red !important;
+}
+
+.selectedTag{
+    cursor: default !important;
+}
+
+.dataTitle{
+    width: 90%;
+    text-align: left;
+    border-radius: 20px;
+    background-color: #626569;
+    margin-top: 0.5em;
+}
+
+.dataTitleCont{
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    margin-left: 3%;
+    margin-right: auto;
+    width: 94%;
+}
+
+.dataText{
+    width: 100%;
+    padding-top: 0.25em;
+    padding-bottom: 0.5em;
+    margin-top: 0.2em;
+    background-color: #2d2d2d;
+    display: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.dataTextCont{
+    padding: 0.25em 0.65em;
+}
+
+.importButton{
+    position: fixed;
+    bottom: 2em;
+    right: 5.4em;
+    background-color: #ca3e1e;
+    border-radius: 50%;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.importButton:hover{
+    cursor: pointer;
+    background-color: orangered;
+}
+
+.exportButton{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    background-color: #2755a1;
+    border-radius: 50%;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.exportButton:hover{
+    cursor: pointer;
+    background-color: #5585d3;
+}
+
+#coverPage{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.69);
+    display: none;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label,
+.exportCard {
+    font-size: 1.2em;
+    color: white;
+    background-color: #ca3e1e;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 0.2em 0.5em;
+}
+
+.exportCard{
+    margin-top: 0.8em;
+    background-color: #2755a1;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.exportCard:hover, .exportCard:focus{
+    background-color: #5585d3;
+    cursor: pointer;
+}
+
+.nClass, .cClass{
+    background-color: #2f2f2f;
+    padding: 0.7em 0.9em;
+}
+
+.cClass:hover, .cClass:focus{
+    cursor: pointer;
+    background-color: #000;
+}
+
+.spanTag{
+    font-size: 0.9em;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.searchT{
+    color: #fff;
+    padding: 0.2em 0.3em;
+    font-size: 0.7em;
+    border-radius: 10px;
+    margin-left: 0.3em;
+}
+
+.addCard, .removeCard{
+    border-radius: 10px;
+    padding: 0.4em;
+}
+
+.addCard{
+    display: inline;
+    background-color: #b50000;
+}
+
+.removeCard{
+    display: inline;
+    background-color: #2755a1;
+}
+
+.addCard:hover{
+    cursor: pointer;
+    background-color: red;
+}
+
+.removeCard:hover{
+    cursor: pointer;
+    background-color: #5585d3;
+}
+
+.editTag{
+    margin-left: 2px;
+    color: #fff;
+}
+
+.editButton{
+    padding: 0.3em;
+    background-color: #2755a1;
+    border-radius: 10px;
+}
+
+.editButton:hover{
+    background-color: #5585d3;
+    cursor: pointer;
+}
+
+.deleteButton{
+    padding: 0.3em;
+    background-color: #b50000;
+    border-radius: 10px;
+}
+
+.deleteButton:hover{
+    background-color: red;
+    cursor: pointer;
+}

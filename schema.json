@@ -1,0 +1,28 @@
+{
+   "cards": [   
+      { 
+         "title":"Card Title",
+         "tags":[ 
+            { 
+               "name":"Tag name",
+               "color":"orange" //Tag color
+            }
+         ],
+         "contents":[ 
+            [ 
+               { 
+                  "First content of first tag":"Description for the content"
+               },
+               { 
+                  "Another content":"Description for this content"
+               }
+            ],
+            [ 
+               { 
+                  "Content for the second tag":"Description for the content"
+               }
+            ]
+         ]
+      }
+   ]
+}

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Note Project" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="wow.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+        <link rel="stylesheet" type="text/css" href="general.css" />
+        <link rel="stylesheet" type="text/css" href="animate.css" />
+        <title>Note Project</title>
+    </head>
+    <body>
+        <div style="display: none;">
+            <input type="file" name="file" id="file" class="inputfile" onchange="handleImport(this)"/>
+            <label for="file">Import cards</label><br>
+            </div>
+        </div>
+        <table style="width: 100%; border-collapse: collapse;">
+        <tbody style="border-collapse: collapse;">
+        <tr style="border-collapse: collapse;">
+            <td class="listHolder" style="padding: 0px">
+        <div class="cardList" id="cardList">
+            <input autocomplete="off" onkeyup="searchEdit(this)" class="searchInput" placeholder="Search for a card">
+            <div id="clL" style="overflow-y: scroll;"></div>
+        </div>
+            </td>
+            <td class="modalHolder" style="padding: 0px">
+            <div id="modalParent">
+                <div class="searchFill">&nbsp;</div>
+                <div class="searchMobile" id="searchMobile">
+                    <input autocomplete="off" onkeyup="searchEdit(this)" class="searchInput" placeholder="Search for a card" onfocus="Popup()">
+                    <div id="spop" class="popup" style="display: none;"></div>
+                </div>
+                <div class="cardModal" id="mainModal">
+            
+                </div>
+            </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        <!--Load Scripts-->
+        <script src="design.js"></script>
+        <div id="importButton" class="importButton" onClick="document.getElementById('file').click()">
+            <span><i class="fa fa-upload" id=""></i></span>
+        </div>
+        <div id="exportButton" class="exportButton" onClick="downloadURI('data:text/json,'+encodeURI(JSON.stringify({cards: cards})).replace(/#/g,'%23'),'exportedNote'+(new Date()).toGMTString().replace(',','').replace(/:/g,'').split(' ').join('-')+'.json')">
+            <span><i class="fa fa-floppy-o" id=""></i></span>
+        </div>
+    </body>
+</html>
