@@ -706,7 +706,7 @@ window.onload = ()=>{
             }
         }
     }
-    parseJSON("{\"cards\": [{\"title\":\"Title\",\"tags\":[{\"name\":\"Tag 1\",\"color\":\"black\"},{\"name\":\"Tag 2\",\"color\":\"#19b3ad\"}],\"contents\":[[{\"Content 1 title\":\"Content 1\"},{\"Content 2 title\":\"Content 2\"}],[{\"Content for tag 2\":\"Content\"}]]},{\"title\":\"Another one\",\"tags\":[],\"contents\":[[]]}]}");
+    parseJSON("{\"cards\": [{\"title\":\"Title\",\"tags\":[{\"name\":\"Tag 1\",\"color\":\"orange\"},{\"name\":\"Tag 2\",\"color\":\"#19b3ad\"}],\"contents\":[[{\"Content 1 title\":\"Content 1\"},{\"Content 2 title\":\"Content 2\"}],[{\"Content for tag 2\":\"Content\"}]]},{\"title\":\"Another one\",\"tags\":[],\"contents\":[[]]}]}");
 };
 
 window.onbeforeunload = function() {
